@@ -1,8 +1,8 @@
 <?php
 // create a variable
 $fname=$_POST['fname'];
-$email=$_POST['phn'];
-$uname=$_POST['email'];
+$phn=$_POST['phn'];
+$email=$_POST['email'];
 $pwd=$_POST['pwd'];
 
 $con=mysqli_connect('localhost','root','','ECommerce');

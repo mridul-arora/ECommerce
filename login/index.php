@@ -43,7 +43,7 @@
                 <ul class='nav navbar-nav navbar-right'>
                     <!--If you are already logged in-->
                     <?php session_start();
-    if(isset($_SESSION['uname'])){ echo "
+    if(isset($_SESSION['phn'])){ echo "
     <html><head><script type='text/javascript'>
     alert('You are already Logged in');
     </script></head>
@@ -51,7 +51,7 @@
                ";
                      header("Location:../"); }?>
                     <!--if not already logged in -->
-                    <?php if(!isset($_SESSION['uname'])) echo "
+                    <?php if(!isset($_SESSION['phn'])) echo "
     <li><a href='../register/'><span class='glyphicon glyphicon-user'></span> Register</a></li>
     <li><a href='index.php'><span class='glyphicon glyphicon-log-in'></span> Login</a></li>
    "?>

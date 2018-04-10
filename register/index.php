@@ -71,16 +71,16 @@
                 <!--Create Account-->
                 </div>
                 <div class="row">
-                    <input class="reg" type="text" placeholder="Full Name" name="fname" />
+                    <input class="reg" type="text" placeholder="Full Name" name="fname" required title="Must contain letters and white spaces only" /> <!--</inp>pattern="[a-zA-Z]$" title="Only letters and white space allowed" required/-->
                 </div>
                  <div class="row">
-                    <input class="reg" type="number" placeholder="Phone no." name="phn" />
+                    <input class="reg" type="number" placeholder="Phone no." name="phn" pattern="[1-9]{1}(?=.*\d){9,}" title="Must contain numbers only" required/>
                 </div>
                 <div class="row">
-                 <input class="reg" type="email" placeholder="Email" name="email" />
+                 <input class="reg" type="email" placeholder="Email" name="email" pattern="([a-z0-9._%+-])+\@(([a-z0-9.-])+\.)+([a-z]{2,4})+$" title="Must be in the form " required/>
                 </div>
                 <div class="row">
-                    <input class="reg" type="password" placeholder="Password" name="pwd" />
+                    <input class="reg" type="password" placeholder="Password" name="pwd" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one lower case, upper case, number and more than 7 characters" required />
                 </div>
                 <div class="row">
                     <button type="sub" name="sub" value="Submit" class="btn btn-submit reg2">Submit</button>
@@ -88,6 +88,76 @@
             </form>
         </Center>
     </div>
+
+<script>
+   /* function checkEmail() {
+
+    var email = document.getElementById('txtEmail');
+    var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+    if (!filter.test(email.value)) {
+    alert('Please provide a valid email address');
+    email.focus;
+    return false;
+ }
+
+var fullname = document.getElementsByName("fname");
+var phone = document.getElementsByName("phn");
+var email = document.getElementsByName("email");
+var password = document.getElementsByName("pwd");
+
+// When the user clicks on the password field, show the message box
+fullname.onfocus = function() {
+    document.getElementsByName("message").style.display = "block";
+}
+
+// When the user clicks outside of the password field, hide the message box
+myInput.onblur = function() {
+    document.getElementById("message").style.display = "none";
+}
+
+// When the user starts to type something inside the password field
+myInput.onkeyup = function() {
+  // Validate lowercase letters
+  var lowerCaseLetters = /[a-z]/g;
+  if(myInput.value.match(lowerCaseLetters)) {
+    letter.classList.remove("invalid");
+    letter.classList.add("valid");
+  } else {
+    letter.classList.remove("valid");
+    letter.classList.add("invalid");
+  }
+
+  // Validate capital letters
+  var upperCaseLetters = /[A-Z]/g;
+  if(myInput.value.match(upperCaseLetters)) {
+    capital.classList.remove("invalid");
+    capital.classList.add("valid");
+  } else {
+    capital.classList.remove("valid");
+    capital.classList.add("invalid");
+  }
+
+  // Validate numbers
+  var numbers = /[0-9]/g;
+  if(myInput.value.match(numbers)) {
+    number.classList.remove("invalid");
+    number.classList.add("valid");
+  } else {
+    number.classList.remove("valid");
+    number.classList.add("invalid");
+  }
+
+  // Validate length
+  if(myInput.value.length >= 8) {
+    length.classList.remove("invalid");
+    length.classList.add("valid");
+  } else {
+    length.classList.remove("valid");
+    length.classList.add("invalid");
+  }
+}*/
+</script>
 
 </body>
 
