@@ -71,13 +71,13 @@
                 <!--Create Account-->
                 </div>
                 <div class="row">
-                    <input class="reg" type="text" placeholder="Full Name" name="fname" required title="Must contain letters and white spaces only" /> <!--</inp>pattern="[a-zA-Z]$" title="Only letters and white space allowed" required/-->
+                    <input class="reg" type="text" placeholder="Full Name" name="fname" required title="Must contain letters and white spaces only" onfocus="blurName()"/> <!--</inp>pattern="[a-zA-Z]$" title="Only letters and white space allowed" required/-->
                 </div>
                  <div class="row">
                     <input class="reg" type="number" placeholder="Phone no." name="phn" pattern="[1-9]{1}(?=.*\d){9,}" title="Must contain numbers only" required/>
                 </div>
                 <div class="row">
-                 <input class="reg" type="email" placeholder="Email" name="email" pattern="([a-z0-9._%+-])+\@(([a-z0-9.-])+\.)+([a-z]{2,4})+$" title="Must be in the form " required/>
+                 <input class="reg" type="email" placeholder="Email" name="email" pattern="([a-z0-9._%+-])+\@(([a-z0-9.-])+\.)+([a-z]{2,4})+$" title="Must be a vaild email" required/>
                 </div>
                 <div class="row">
                     <input class="reg" type="password" placeholder="Password" name="pwd" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one lower case, upper case, number and more than 7 characters" required />
@@ -90,7 +90,14 @@
     </div>
 
 <script>
-   /* function checkEmail() {
+   function blurName(){
+       document.getElementsByName("fname").value {
+           if (!preg_match("/^[a-zA-Z ]*$/")) {
+alert("Only letters and white space allowed");
+}
+}
+   }
+    /* function checkEmail() {
 
     var email = document.getElementById('txtEmail');
     var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
